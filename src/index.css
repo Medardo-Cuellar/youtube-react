@@ -82,5 +82,19 @@ body {
 #content {
   grid-column: 2/3;
   grid-row: 2/3;
-  background-color: darkgreen;
+}
+
+#categories-list {
+  display:flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+#categories-list .category {
+  padding: 1rem;
+  border-radius: 20px;
+  background-color: #2f2f2f;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
