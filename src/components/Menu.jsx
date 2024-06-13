@@ -8,7 +8,7 @@ export default function Menu() {
     { icon: "🌟", label: "Favorites" },
   ];
   return (
-    <aside id="menu">
+    <aside id="menu" className="col-start-1 col-end-2 row-start-2 row-end-3 ps-4">
       {/* <div className="menu-item">
             <span>🏠</span>
             <span>Hong</span>
@@ -21,16 +21,14 @@ export default function Menu() {
             <span>🕐</span>
             <span>Subscriptions</span>
             </div> */}
-      {menuItems
-        .filter((item) => item.label.startsWith("S"))
-        .map((item) => {
+      {menuItems.map((item) => {
           return (
-            <div key={`menu-item=${item.text}`} className="menu-item">
+            <div key={`menu-item=${item.text}`} className="p-4 rounded-sm flex flex-row gap-2 align-middle bg-transparent hover:bg-slate-700 hover:rounded-xl hover:me-4">
               <span>{item.icon}</span>
               <span>{item.label}</span>
             </div>
           );
-        })}
+        })/* .filter((item) => item.label.startsWith("S")) */}
     </aside>
   );
 }
