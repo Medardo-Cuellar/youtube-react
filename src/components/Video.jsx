@@ -11,11 +11,12 @@
     </article>        
     )
 } */
+import clsx from "clsx";
 
 export default function Video({image, title, channel}) {
-    const articleClassNames = "video-card" + (channel === "Channel 1" ? " special" : "");
+    /* const articleClassNames = "video-card" + (channel === "Channel 1" ? " special" : ""); */
     return (
-    <article className={articleClassNames}>
+    <article className={clsx("video-card", {special: channel === "Channel 1"})}>
         <img src={image} alt="" />
         <footer>
             {channel ? <img src={`https://api.dicebear.com/8.x/notionists-neutral/svg?seed=${channel}`} alt="" /> : <span>🤷🏻</span>}
