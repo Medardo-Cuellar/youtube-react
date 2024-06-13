@@ -13,12 +13,12 @@
 } */
 
 export default function Video({image, title, channel}) {
-
+    const articleClassNames = "video-card" + (channel === "Channel 1" ? " special" : "");
     return (
-    <article className="video-card">
+    <article className={articleClassNames}>
         <img src={image} alt="" />
         <footer>
-            <img src={`https://api.dicebear.com/8.x/notionists-neutral/svg?seed=${channel}`} alt="" /> {/* la imagen no tiene un grid solo le decimos donde empieza y donde termina */}
+            {channel ? <img src={`https://api.dicebear.com/8.x/notionists-neutral/svg?seed=${channel}`} alt="" /> : <span>🤷🏻</span>}
             <span className="video-card-title">{title}</span>
             <span className="video-card-channel">{channel}</span>
         </footer>

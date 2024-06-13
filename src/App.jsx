@@ -10,4 +10,4 @@ export default function App() {
       <Content />
     </main>
   )
-}
+}65

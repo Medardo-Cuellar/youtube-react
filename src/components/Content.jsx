@@ -24,7 +24,7 @@ const videos = [
     image:
       "https://picsum.photos/125/",
     title: "Video 4",
-    channel: "Channel 4",
+    channel: "",
   },
 ];
 
