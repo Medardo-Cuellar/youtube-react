@@ -3,7 +3,7 @@ export default function Categories() {
         "all","music","gaming","news","movies","fashion","sports","tech"
     ]
     return(
-        <div id="categories-list">
+        <div id="categories-list" className="flex flex-row gap-4 mt-2">
             {/* <span className="category">
                 Cat 1
                 </span>
@@ -14,7 +14,7 @@ export default function Categories() {
                 Cat 3
             </span> */}
             {categories.map((category) => {
-                return <span key={`category-${category}`} className="category">{category}</span>
+                return <span key={`category-${category}`} className="p-4 rounded-2xl bg-slate-600 flex flex-col gap-2">{category}</span>
             })}
         </div>
         
